@@ -1,0 +1,9 @@
+@import './variables.scss';
+
+/* 改变主题色变量 */
+$--color-primary :$primaryColor;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~cestc-ioc-ui/lib/theme-chalk/fonts';
+
+@import "~cestc-ioc-ui/packages/theme-chalk/src/index";

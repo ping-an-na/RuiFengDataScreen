@@ -1,0 +1,520 @@
+
+$safetyBoxWidth: 20px;
+
+.full-view {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .mid-top-con {
+  }
+
+  .middle-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    // background: #0e1a30bf;
+    background: url('~@/assets/agriculture/jvxing_738_copy_2.png') top center no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    width: calc(100% - 912px);
+    height: 84px;
+    position: absolute;
+    left: 50%;
+    top: 84px;
+    transform: translate(-50%, 0);
+
+
+    > div {
+      width: 20%;
+      height: 100%;
+      //overflow: hidden;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+    }
+
+    .top-image {
+      width: 58px;
+      height: 58px;
+      margin-left: 13px;
+    }
+
+    .top-items {
+      margin-left: 4px;
+
+      .items-name {
+        font-family: Source Han Sans CN;
+        font-weight: 500;
+        font-size: 12px;
+        color: #d8d8d8;
+      }
+
+      .items-value {
+        font-family: DINPro;
+        font-weight: 500;
+        font-size: 26px;
+        color: #ffffff;
+        margin-top: 7px;
+      }
+    }
+  }
+
+
+  .bo-top-con {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+
+    .more-btn {
+      position: absolute;
+      //right: -153px;
+      //top: 23px;
+      right: -250px;
+      top: -5px;
+
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+      font-size: 14px;
+      color: #eef3ff;
+      line-height: 8px;
+      cursor: pointer;
+      z-index: 4;
+    }
+  }
+
+  .mid-mi-conA {
+    position: absolute;
+    bottom: 0;
+    left: 440px;
+    height: 337px;
+    width: calc(100% - 879px);
+  }
+
+  .mid-mi-con {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 440px;
+    height: 327px;
+    width: calc(100% - 879px);
+    transition: height 2s ease;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mid-mi-con-bg-hei {
+    background: linear-gradient(0deg, rgba(12, 32, 44, 1) 80%, rgba(12, 32, 44, 0.5) 100%);
+  }
+
+  @keyframes upCenter {
+    from {
+      transform: translateY(105%);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes downCenter {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(105%);
+
+    }
+  }
+
+  .mid-mi-con-infoUnfold {
+    animation: downCenter 2s ease forwards;
+  }
+
+  .mid-mi-con-infoUnfold-up {
+    animation: upCenter 2s ease forwards;
+  }
+
+  .middle-bottom {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    margin-bottom: 10px;
+    background: url('~@/assets/agriculture/jvxingkuang_2x1(1).png') center no-repeat, linear-gradient(0deg, rgba(12, 32, 44, 1) 80%, rgba(12, 32, 44, 0.5) 100%);
+    background-size: 100% 100%;
+    //animation: upCenter 2s ease forwards;
+    overflow: hidden;
+
+    .bo-line-chart {
+      height: 300px;
+      position: absolute;
+      top: 13px;
+      width: calc(100% - 40px);
+
+      .bo-li-unit {
+        position: absolute;
+        top: 0px;
+        left: 260px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        font-size: 12px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .district-project-tip-dongdong {
+    transform: translateX(-430px) translateY(310px);
+  }
+
+  .quick-search-dongdong {
+    transform: translateX(450px) translateY(-50px);
+  }
+
+  #mapbg {
+    position: absolute !important;
+    width: 1920px;
+    height: 1080px;
+    background: #020c2c;
+    z-index: 0;
+    transform-origin: 0px 0px;
+  }
+
+  // 默认状态
+  .left-model {
+    animation: leftUnfold 2s ease forwards;
+  }
+
+  // map-tool 收起
+  .map-tool-model {
+    animation: mapToolUnfold 2s ease forwards;
+  }
+
+  .right-model {
+    animation: rightUnfold 2s ease forwards;
+  }
+
+  .middle-top {
+    animation: middleTopUnfold 2s ease forwards;
+  }
+
+  //省市区 底部
+  .mid-bot-81 {
+    animation: middleBotUnfold 2s ease forwards;
+  }
+
+  // 区域说明
+  .district-tip {
+    animation: districtTipUnfold 2s ease forwards;
+  }
+
+  // 项目区域说明
+  .district-project-tip {
+    animation: districtProjectTipUnfold 2s ease forwards;
+  }
+
+  // 项目搜索
+  .quick-search {
+    animation: quickSearchUnfold 2s ease forwards;
+  }
+
+  // 收起状态
+  &.pack-up {
+    // 左侧收起
+    .left-model {
+      animation: leftPackUp 2s ease forwards;
+    }
+
+    // map-tool 收起
+    .map-tool-model {
+      animation: mapToolPackUp 2s ease forwards;
+    }
+
+    // 右边模块
+    .right-model {
+      animation: rightPackUp 2s ease forwards;
+    }
+
+    .middle-top {
+      animation: middleTopPackUp 2s ease forwards;
+    }
+
+    // 省市区 底部
+    .mid-bot-81 {
+      animation: middlebotPackUp 2s ease forwards;
+    }
+
+    // 区域说明
+    .district-tip {
+      animation: districtTipPackUP 2s ease forwards;
+    }
+
+    // 项目区域说明
+    .district-project-tip {
+      animation: districtProjectTipPackUP 2s ease forwards;
+    }
+
+    // 项目搜索
+    .quick-search {
+      animation: quickSearchPackUP 2s ease forwards;
+    }
+
+
+  }
+
+  @keyframes leftUnfold {
+    from {
+      transform: translateX(-450px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes leftPackUp {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-450px);
+    }
+  }
+  @keyframes rightUnfold {
+    from {
+      transform: translateX(450px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes rightPackUp {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(450px);
+    }
+  }
+  @keyframes mapToolUnfold {
+    from {
+      transform: translateX(-430px);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes mapToolPackUp {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-430px);
+    }
+  }
+
+  @keyframes middleTopUnfold {
+    from {
+      transform: translate(-50%, -170px);
+    }
+
+    to {
+      transform: translate(-50%, 0)
+    }
+  }
+
+  // 省市区 底部
+  @keyframes middleBotUnfold {
+    from {
+      transform: translateY(300px);
+    }
+    to {
+      transform: translateY(0px);
+
+    }
+  }
+
+  @keyframes middleTopPackUp {
+    from {
+      transform: translate(-50%, 0)
+    }
+
+    to {
+      transform: translate(-50%, -170px);
+    }
+  }
+  @keyframes middlebotPackUp {
+    from {
+      transform: translateY(0)
+    }
+    to {
+      transform: translateY(300px)
+    }
+  }
+
+
+  @keyframes middleBottomUnfold {
+    from {
+      transform: translateY(400px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+  @keyframes middleBottomPackUp {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(400px);
+    }
+  }
+
+
+  @keyframes districtTipUnfold {
+    from {
+      transform: translateY(310px) translateX(-430px);
+    }
+
+    to {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  @keyframes districtTipPackUP {
+    from {
+      transform: translateX(0) translateY(0);
+    }
+
+    to {
+      transform: translateX(-430px) translateY(310px);
+    }
+  }
+  @keyframes districtProjectTipUnfold {
+    from {
+      transform: translateX(-430px);
+    }
+
+    to {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  @keyframes districtProjectTipPackUP {
+    from {
+      transform: translateX(0) translateY(0);
+    }
+
+    to {
+      transform: translateX(-430px) translateY(310px);
+    }
+  }
+  @keyframes quickSearchUnfold {
+    from {
+      transform: translateX(450px) translateY(-50px);
+    }
+
+    to {
+      transform: translateX(0) translateY(0);
+    }
+  }
+  @keyframes quickSearchPackUP {
+    from {
+      transform: translateX(0) translateY(0);
+    }
+    to {
+      transform: translateX(450px) translateY(-50px);
+    }
+  }
+}
+
+.ri-con-ex {
+  background: linear-gradient(-80deg, rgba(12, 32, 44, .7) 80%, rgba(2, 12, 44, 0) 100%);
+  //opacity: 0.8;
+  width: 440px;
+  margin-top: 68px;
+  height: calc(100% - 77px);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.ri-con-ex-two {
+  //background: linear-gradient(-80deg, rgba(12, 32, 44, .7) 80%, rgba(2, 12, 44, 0) 100%);
+  //opacity: 0.8;
+  width: 440px;
+  margin-top: 68px;
+  height: calc(100% - 77px);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+.maskClass {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(5, 19, 49, .8), #051331);
+}
+
+.maskClassWu {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  background: #020c2c;
+  opacity: 0.80;
+}
+
+.wrap {
+  background: #112534;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+}
+
+#ScaleBox {
+  --scale: 1;
+}
+
+.ScaleBox {
+  transform: scale(var(--scale)) translate(-50%, -50%);
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  transform-origin: 0 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: 0.3s;
+  z-index: 999;
+}
+
+
+::v-deep {
+  .amap-icon {
+    cursor: default;
+  }
+
+  .el-dialog {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.right-model-two {
+  transform: translateX(0);
+}

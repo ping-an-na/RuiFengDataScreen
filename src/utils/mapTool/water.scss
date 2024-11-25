@@ -1,0 +1,78 @@
+/**
+ * @Description: 
+ * @Author: qiyongguo
+ * @Date: 2022-01-17
+ */
+ #grad2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.inner-circle {
+  width: 9.6px;
+  height:9.6px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 2px solid rgba(255, 0, 0, 0.3);
+  /* box-shadow: inset 0px 1px 20px 4px rgba(255, 0, 0, 0.5); */
+  animation: moveInner 1s infinite;
+}
+.middle-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 77, 77, 0.5);
+  animation: moveMiddle 1s infinite;
+  border: 2px solid rgba(255, 77, 77, 0.5);
+  box-shadow: inset 0px 1px 20px 4px rgba(255, 77, 77, 0.5);
+}
+.biggest-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+  height: 66px;
+  border-radius: 50% 50%;
+  background-color: rgba(255, 77, 77, 0.7);
+  position: absolute;
+  animation: moveBiggest 1s infinite;
+  /* border: 2px solid #ffbd62; */
+  box-shadow: inset 0px 1px 20px 4px rgba(255, 77, 77, 0.7);
+}
+@keyframes moveInner {
+  from {
+    width: 12%;
+    height: 12%;
+  }
+  to {
+    width: 40%;
+    height: 40%;
+  }
+}
+@keyframes moveMiddle {
+  from {
+    width: 40%;
+    height: 40%;
+  }
+  to {
+    width: 66%;
+    height: 66%;
+  }
+}
+
+@keyframes moveBiggest {
+  from {
+    width: 36px;
+    height: 36px;
+  }
+  to {
+    width: 66px;
+    height: 66px;
+  }
+}

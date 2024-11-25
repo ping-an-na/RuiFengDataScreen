@@ -1,0 +1,31 @@
+@import '~@/styles/mixin.scss';
+.cestc-query {
+  padding-right: 16px;
+  height: 100%;
+  .cestc-tb-section {
+    height: calc(100% - 48px);
+    @include bg;
+    .cestc-search-div {
+      padding: 16px;
+      .search-btm-row {
+        margin-top: 16px;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    .cestc-list {
+        height: calc(100% - 110px);
+    }
+    .tb-page {
+        margin-top: 6px;
+        text-align: right;
+    }
+  }
+}
+[data-theme="dark-theme"]{
+  .cestc-query {
+     .cestc-tb-section {
+        @include bg_dark;
+      }
+  }
+}

@@ -1,0 +1,22 @@
+[data-theme="dark-theme"] {
+    
+  // 滚动条样式
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 212, 255, 0.36);
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0);
+    -webkit-box-shadow: inset 0 0 4px rgba(255, 255, 255, 0);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 212, 255, 0.3);
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0);
+    -webkit-box-shadow: inset 0 0 4px rgba(255, 255, 255, 0);
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 212, 255, 0.3);
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0);
+    -webkit-box-shadow: inset 0 0 4px rgba(255, 255, 255, 0);
+  }
+}

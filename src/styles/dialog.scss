@@ -1,0 +1,268 @@
+.custom-dialog {
+
+  &.el-dialog {
+    background-color: transparent;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    position: fixed;
+    left: 50% !important;
+    top: 50% !important;
+    // background: #051331;
+    //  background: rgba(5, 19, 49, 0);
+    transform: scale(1) translate(-50%, -50%) !important;
+    margin-top: 0vh !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  .el-dialog__header {
+    display: none;
+  }
+
+  .el-dialog__body {
+    padding: 0;
+
+    .top-d {
+      display: flex;
+
+      .title-model {
+        flex: 1;
+        width: 100%;
+        height: 32px;
+        background-image: url('~@/assets/agriculture/zu38_sucaianniu_2x.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        //font-family: HYYakuHei;
+        //font-weight: normal;
+        font-size: 16px;
+        color: #ffffff;
+        font-style: italic;
+        padding-left: 25px;
+        line-height: 30px;
+        font-weight: 900;
+      }
+
+      .right-close {
+        width: 32px;
+        height: 32px;
+        background-image: url('~@/assets/agriculture/container_7@2x.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin-left: 13px;
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      width: 100%;
+      background-image: url('~@/assets/agriculture/kuangjia_2.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 60vh;
+      //min-height: 200px;
+      padding: 30px 25px 10px 25px;
+      margin-top: 10px;
+
+      &.form {
+        //height: 700px;
+      }
+
+      .el-table {
+        background-color: transparent;
+
+        tr, th, td {
+          background-color: transparent;
+          border-bottom-color: #00aaf6;
+        }
+
+        &::before {
+          background-color: transparent;
+        }
+      }
+
+      .el-table--border {
+        border-color: transparent;
+
+        td, th {
+          border-right: none;
+        }
+
+        &::after {
+          background-color: #00aaf6;
+        }
+      }
+
+      .pagination {
+        color: #838da4;
+
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+
+        li, .btn-prev, .btn-next, .el-input__inner {
+          background-color: transparent;
+
+          &:not(.active) {
+            color: #838da4;
+          }
+        }
+      }
+
+      //
+      .info-show {
+        height: 100%;
+        text-align: center;
+        color: #fff;
+
+        .type-label {
+          font-size: 20px;
+          padding: 20px;
+        }
+
+        .type-title {
+          color: #00aaf6;
+          padding-bottom: 20px;
+        }
+
+        .textarea {
+          border: 1px solid #ccc;
+          height: 360px;
+          border-radius: 5px;
+          margin: 0 20px;
+          text-align: left;
+          padding: 20px 30px;
+          overflow: auto;
+        }
+      }
+
+      //
+      .form-table {
+        padding-top: 10px;
+        padding-right: 20px;
+
+        .el-form-item {
+          width: 50%;
+          display: inline-block;
+
+          .el-form-item__label {
+            color: #a7bddd
+          }
+
+          .el-input__inner, .el-textarea__inner {
+            background-color: #223858;
+            border-color: #223858;
+            color: #f7f8f9;
+            padding-left:8px ;
+          }
+        }
+      }
+    }
+
+    .content1 {
+      width: 100%;
+      background-image: url('~@/assets/agriculture/kuangjia_2.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      height: 590px;
+      //min-height: 200px;
+      padding: 25px 10px 10px 30px;
+      margin-top: 10px;
+
+      &.form {
+        //height: 700px;
+      }
+
+      .el-table {
+        background-color: transparent;
+
+        tr, th, td {
+          background-color: transparent;
+          border-bottom-color: #00aaf6;
+        }
+
+        &::before {
+          background-color: transparent;
+        }
+      }
+
+      .el-table--border {
+        border-color: transparent;
+
+        td, th {
+          border-right: none;
+        }
+
+        &::after {
+          background-color: #00aaf6;
+        }
+      }
+
+      .pagination {
+        color: #838da4;
+        //float: right;
+        //margin-top: 40px;
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+
+        li, .btn-prev, .btn-next, .el-input__inner {
+          background-color: transparent;
+
+          &:not(.active) {
+            color: #838da4;
+          }
+        }
+      }
+
+      //
+      .info-show {
+        height: 100%;
+        text-align: center;
+        color: #fff;
+
+        .type-label {
+          font-size: 20px;
+          padding: 20px;
+        }
+
+        .type-title {
+          color: #00aaf6;
+          padding-bottom: 20px;
+        }
+
+        .textarea {
+          border: 1px solid #ccc;
+          height: 360px;
+          border-radius: 5px;
+          margin: 0 20px;
+          text-align: left;
+          padding: 20px 30px;
+          overflow: auto;
+        }
+      }
+
+      //
+      .form-table {
+        padding-top: 10px;
+        padding-right: 20px;
+
+        .el-form-item {
+          width: 50%;
+          display: inline-block;
+
+          .el-form-item__label {
+            color: #a7bddd
+          }
+
+          .el-input__inner, .el-textarea__inner {
+            background-color: #223858;
+            border-color: #223858;
+            color: #f7f8f9;
+            padding-left:8px ;
+
+          }
+        }
+      }
+    }
+  }
+}
